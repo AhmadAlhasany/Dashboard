@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
+import CheckIcon from '@mui/icons-material/Check';
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import { Box } from '@mui/material';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CheckIcon />
+      <AppBar position="fixed" color="default">
+        <Toolbar>
+          <Typography variant="h2">
+            Remind
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
+      <Box
+      height={200}
+      width={200}
+      my={4}
+      display="flex"
+      alignItems="center"
+      gap={4}
+      p={2}
+      sx={{ border: '2px solid grey' }}
+    >
+      This Box uses MUI System props for quick customization.
+    </Box>
+
     </div>
   );
 }
